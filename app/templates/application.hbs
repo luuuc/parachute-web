@@ -1,3 +1,81 @@
-<h2 id='title'>Welcome to Ember.js</h2>
+<header class="navbar fixed top">
+  <div class="container">
+    <nav class="left">
+      <a class="btn split left exception-sidebar-btn">{{fa-icon "filter"}} Exceptions</a>
+      <div class="dropdown">
+        <div class="btn split left settings-dropdown-btn">
+          {{fa-icon "cogs"}} Settings
+        </div>
+        {{view "dropdown/settings"}}
+      </div>
+
+    </nav>
+
+    <a href="/" class="brand">
+      <span>Parachute</span>
+    </a>
+
+    <nav class="right">
+      <div class="dropdown">
+        <div class="btn split left avatar profile-dropdown-btn">
+          {{gravatar-image email='luc@codedynamic.com' size="25"}} Profile
+        </div>
+        {{view "dropdown/profile"}}
+      </div>
+      <a class="btn notification-sidebar-btn">{{fa-icon "bell"}}</a>
+    </nav>
+  </div>
+</header>
+
+<div class="column left main visible-sm">
+  <div class="container">
+    <h2 id='title'>Main column</h2>
+    <h3 id='title'>Main column</h2>
+    {{fa-icon "th-list"}}
+    {{fa-icon "users"}}
+    {{fa-icon "camera"}}
+    <div class="palette">
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+    </div>
+  </div>
+
+  <footer class="pagination">
+    <div class="container">
+      main footer
+    </div>
+  </footer>
+</div>
+
+<div class="column right border secondary">
+  <div class="container">
+    <h2 id='title'>
+      Secondary column
+    </h2>
+  </div>
+
+  <footer class="anchor-nav">
+    <div class="container">
+      secondary footer
+    </div>
+  </footer>
+</div>
+
+{{view "sidebar/exceptions"}}
+{{view "sidebar/notifications"}}
+
+
 
 {{outlet}}

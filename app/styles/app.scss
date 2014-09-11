@@ -1,0 +1,43 @@
+@import "variables";
+
+@import "vendor/normalize";
+//@import "vendor/font-awesome";
+
+@import "layout/navbar";
+@import "layout/column";
+@import "layout/sidebar";
+
+@import "base/typography";
+@import "base/button";
+
+@import "component/dropdown";
+
+html, body {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.palette div {
+  width: 10em;
+  height: 3em;
+  line-height: 3em;
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+
+  $num-colors: 100;
+
+  @for $i from 0 to $num-colors {
+    $c: adjust-hue(darken($base-color, 20%), -360deg / $num-colors * $i);
+
+    &:nth-child(#{$i}) {
+      background: $c;
+    }
+
+    &:nth-child(#{$i}):before {
+      color: darken($c, 20%);
+      content: "#{$i}: #{-360deg / $num-colors * $i}";
+    }
+  }
+}

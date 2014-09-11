@@ -1,0 +1,26 @@
+// layout
+$base-color: #7db6d8; //#34495e;
+
+$default-padding: 20px;
+$default-small-padding: 10px;
+
+$main-width: 40%;
+$main-sm-width: 100%;
+$main-lg-width: 36%;
+
+$secondary-width: 60%;
+$secondary-sm-width: 100%;
+$secondary-lg-width: 50%;
+
+// typography
+$heading-color: #D32525; //adjust-hue(darken($base-color, 20%), -200deg);
+$sub-heading-color: #000;
+
+// navbar
+$navbar-height: 40px;
+$navbar-color: darken($base-color, 40%);
+
+// sidebar
+$sidebar-width: 20%;
+$sidebar-sm-width: 50%;
+$sidebar-lg-width: 14%;

@@ -1,0 +1,60 @@
+.sidebar {
+  background-color: #EEE;
+  width: $sidebar-width;
+  z-index: 9;
+  //display: none;
+
+  &.left {
+    left: $sidebar-width * -1;
+    transition: left 300ms;
+  }
+
+  &.right {
+    right: $sidebar-width * -1;
+    transition: right 300ms;
+  }
+
+  &.hidden {
+    //display: none;
+  }
+
+  &.visible {
+    //display: block;
+
+    &.left {
+      left: 0;
+      transition: left 300ms;
+    }
+
+    &.right {
+      right: 0;
+      transition: right 300ms;
+    }
+  }
+}
+
+@media screen and (max-width:1024px) {
+  .sidebar {
+    width: $sidebar-sm-width;
+  }
+}
+
+// Large Screen
+@media screen and (min-width:1600px) {
+  .sidebar {
+    width: $sidebar-lg-width;
+
+    &.left {
+      display: block;
+      left: 0;
+    }
+
+    // &.right {
+    //   right: 0;
+    // }
+  }
+}
+
+// Print
+@media print {
+}

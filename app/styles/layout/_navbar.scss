@@ -1,0 +1,61 @@
+.navbar {
+  background-color: $navbar-color;
+  height: $navbar-height;
+  line-height: $navbar-height;
+  text-align: center;
+  color: white;
+  box-shadow: 0 0 0 1px #dfdfdf;
+  z-index: 10;
+
+
+  &.fixed {
+    position: fixed;
+    left: 0;
+    right: 0;
+
+    &.top {
+      top: 0;
+    }
+
+    &.bottom {
+      bottom: 0;
+    }
+  }
+
+  .brand {
+    display: inline-block;
+    width: ($navbar-height - 10);
+    height: $navbar-height;
+    background: image-url('assets/images/parachute.svg') center center no-repeat;
+    background-size: ($navbar-height - 10) ($navbar-height - 10);
+    cursor: pointer;
+
+    span {
+      display: none;
+    }
+  }
+
+  nav, .nav {
+
+
+    &.left {
+      float: left;
+    }
+
+    &.right {
+      float: right;
+    }
+
+    .btn {
+      color: lighten($navbar-color, 60%);
+      background-color: darken($navbar-color, 5%);
+
+      &.active,
+      &:hover {
+        background-color: darken($navbar-color, 10%);
+        color: lighten($navbar-color, 50%);
+      }
+    }
+  }
+
+}
